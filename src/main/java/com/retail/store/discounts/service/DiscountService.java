@@ -1,5 +1,8 @@
 package com.retail.store.discounts.service;
 
+import com.retail.store.discounts.entity.Cart;
+import com.retail.store.discounts.entity.User;
+
 /**
  * Created by Farouk Taher
  * Date: 19-12-2020
@@ -7,5 +10,5 @@ package com.retail.store.discounts.service;
  */
 public interface DiscountService {
 
-    void getFinalPrice();
+    public Cart getFinalPrice(Cart cart, User user);
 }

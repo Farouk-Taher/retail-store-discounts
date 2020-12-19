@@ -28,9 +28,9 @@ public class User extends BaseEntity {
     private String email;
 
     @Column(name = "is_employee")
-    private Boolean isEmployee;
+    private boolean isEmployee;
 
     @Column(name = "is_affiliate")
-    private Boolean isAffiliate;
+    private boolean isAffiliate;
 
 }
