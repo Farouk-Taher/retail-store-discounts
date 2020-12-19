@@ -7,5 +7,5 @@ package com.retail.store.discounts.service;
  */
 public interface DiscountService {
 
-    public void getFinalPrice();
+    void getFinalPrice();
 }

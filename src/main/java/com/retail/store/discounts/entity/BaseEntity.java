@@ -18,10 +18,10 @@ public abstract class BaseEntity implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
-    @Column("creation_date")
+    @Column(name = "creation_date")
     private LocalDate creationDate;
 
-    @Column("last_modification_date")
+    @Column(name = "last_modification_date")
     private LocalDate lastModificationDate;
 
 }

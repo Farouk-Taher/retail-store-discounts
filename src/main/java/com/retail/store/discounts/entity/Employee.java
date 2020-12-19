@@ -12,13 +12,13 @@ import java.time.LocalDate;
  * Time: 8:08 PM
  */
 @Entity
-@Table("employee")
+@Table(name = "employee")
 @Data
 @EqualsAndHashCode(callSuper = true)
 public class Employee extends BaseEntity {
 
     @Id
-    @Column("id")
+    @Column(name = "id")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 

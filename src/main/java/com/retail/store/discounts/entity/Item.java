@@ -7,30 +7,30 @@ import javax.persistence.*;
 
 /**
  * Created by Farouk Taher
- * Date: 17-12-2020
- * Time: 8:41 PM
+ * Date: 19-12-2020
+ * Time: 4:03 PM
  */
 @EqualsAndHashCode(callSuper = true)
 @Entity
-@Table(name = "user")
+@Table(name = "item")
 @Data
-public class User extends BaseEntity {
+public class Item extends BaseEntity {
 
     @Id
     @Column(name = "id")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    @Column(name = "price", nullable = false)
+    private double price;
+
     @Column(name = "name", nullable = false)
     private String name;
 
-    @Column(name = "email", nullable = false, unique = true)
-    private String email;
+    @Column(name = "type")
+    private String type;
 
-    @Column(name = "is_employee")
-    private Boolean isEmployee;
-
-    @Column(name = "is_affiliate")
-    private Boolean isAffiliate;
-
+    @ManyToOne
+    @JoinColumn(name = "cart_id")
+    private Cart cart;
 }
