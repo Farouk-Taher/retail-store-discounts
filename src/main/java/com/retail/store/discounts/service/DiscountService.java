@@ -10,5 +10,5 @@ import com.retail.store.discounts.entity.User;
  */
 public interface DiscountService {
 
-    public Cart getFinalPrice(Cart cart, User user);
+    public Cart getFinalPrice(Long cartId, Long userId) throws Exception;
 }
