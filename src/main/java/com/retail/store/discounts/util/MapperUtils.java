@@ -23,14 +23,13 @@ import java.util.Map;
 @Data
 @Slf4j
 public class MapperUtils {
-    private static ObjectMapper mapper;
+    private static ObjectMapper mapper = new ObjectMapper();
     private static MapperUtils INSTANCE = new MapperUtils();
 
     /**
      *
      */
     private MapperUtils() {
-        mapper = new ObjectMapper();
         mapper.configure(SerializationFeature.WRITE_CHAR_ARRAYS_AS_JSON_ARRAYS, true);
         mapper.configure(JsonParser.Feature.ALLOW_SINGLE_QUOTES, true);
         mapper.configure(JsonParser.Feature.ALLOW_UNQUOTED_FIELD_NAMES, true);
